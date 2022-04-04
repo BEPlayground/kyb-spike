@@ -23,7 +23,7 @@ public class CreateMiddeskAction {
             "}\n";
 
     public static void main(String[] args) throws IOException {
-        new CreateMiddeskBusiness(new CreateMiddeskBusinessDAO()).apply(HttpClients.createDefault(), requestWithJson);
-
+        new CreateMiddeskBusiness(new CreateMiddeskBusinessDAO())
+                .apply(HttpClients.createDefault(), requestWithJson);
     }
 }

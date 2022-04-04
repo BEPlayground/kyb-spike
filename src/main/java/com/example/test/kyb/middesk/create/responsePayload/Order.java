@@ -1,4 +1,4 @@
-package com.example.test.kyb.middesk.create.in;
+package com.example.test.kyb.middesk.create.responsePayload;
 
 import java.util.Date;
 

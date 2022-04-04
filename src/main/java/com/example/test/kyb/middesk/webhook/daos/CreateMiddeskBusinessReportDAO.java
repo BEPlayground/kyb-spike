@@ -1,6 +1,6 @@
 package com.example.test.kyb.middesk.webhook.daos;
 
-import com.example.test.kyb.middesk.webhook.in.Root;
+import com.example.test.kyb.middesk.webhook.responsePayload.Root;
 
 public class CreateMiddeskBusinessReportDAO {
 

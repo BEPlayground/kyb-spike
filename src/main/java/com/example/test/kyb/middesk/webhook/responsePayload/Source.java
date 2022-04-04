@@ -1,4 +1,4 @@
-package com.example.test.kyb.middesk.webhook.in;
+package com.example.test.kyb.middesk.webhook.responsePayload;
 
 public class Source {
     public String id;

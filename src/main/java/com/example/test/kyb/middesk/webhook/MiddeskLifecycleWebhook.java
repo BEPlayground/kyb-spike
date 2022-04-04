@@ -2,7 +2,6 @@ package com.example.test.kyb.middesk.webhook;
 
 import com.example.test.kyb.middesk.webhook.daos.CreateMiddeskBusinessReportDAO;
 import com.example.test.kyb.middesk.webhook.services.FetchMiddeskBusinessById;
-import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
 import java.io.IOException;

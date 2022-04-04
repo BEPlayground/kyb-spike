@@ -1,7 +1,7 @@
 package com.example.test.kyb.middesk.webhook.services;
 
 import com.example.test.kyb.middesk.webhook.daos.CreateMiddeskBusinessReportDAO;
-import com.example.test.kyb.middesk.webhook.in.Root;
+import com.example.test.kyb.middesk.webhook.responsePayload.Root;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -24,7 +24,7 @@ public class FetchMiddeskBusinessById {
     }
 
     public void apply(CloseableHttpClient httpClient, String businessId) throws IOException {
-        final String url = String.format("https://api-sandbox.middesk.com/v1/businesses %s", businessId);
+        final String url = String.format("https://api-sandbox.middesk.com/v1/businesses/%s", businessId);
 
         // create request
         HttpGet httpGet = new HttpGet(url);

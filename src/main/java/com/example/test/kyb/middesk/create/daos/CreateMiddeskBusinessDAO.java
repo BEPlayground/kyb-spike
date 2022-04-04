@@ -1,6 +1,6 @@
 package com.example.test.kyb.middesk.create.daos;
 
-import com.example.test.kyb.middesk.create.in.Root;
+import com.example.test.kyb.middesk.create.responsePayload.Root;
 
 import java.io.Serializable;
 

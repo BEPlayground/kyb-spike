@@ -1,4 +1,4 @@
-package com.example.test.kyb.middesk.create.in;
+package com.example.test.kyb.middesk.webhook.responsePayload;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,22 +14,22 @@ public class Root{
     public ArrayList<Object> tags;
     public Requester requester;
     public String assignee_id;
-    public Object review;
+    public Review review;
     public Object tin;
     public Object business_batch_id;
-    public Object formation;
+    public Formation formation;
     public Object website;
-    public Object watchlist;
+    public Watchlist watchlist;
     public ArrayList<Object> bankruptcies;
     public ArrayList<Object> certifications;
-    public ArrayList<Object> documents;
-    public ArrayList<Object> liens;
-    public ArrayList<Object> names;
+    public ArrayList<Document> documents;
+    public ArrayList<Lien> liens;
+    public ArrayList<String> names; // they thought this was a class. So no idea if this will be an issue.
     public ArrayList<Address> addresses;
     public ArrayList<Object> people;
     public ArrayList<Object> phone_numbers;
     public ArrayList<Object> profiles;
-    public ArrayList<Object> registrations;
+    public ArrayList<Registration> registrations;
     public ArrayList<Order> orders;
     public Object industry_classification;
     public Object subscription;
