@@ -1,7 +1,7 @@
-package com.example.test.kyb.middesk.outbound.request;
+package com.example.test.kyb.middesk.create.request;
 
-import com.example.test.kyb.middesk.outbound.request.daos.MiddeskBusinessDAO;
-import com.example.test.kyb.middesk.outbound.request.services.CreateMiddeskBusiness;
+import com.example.test.kyb.middesk.create.daos.CreateMiddeskBusinessDAO;
+import com.example.test.kyb.middesk.create.services.CreateMiddeskBusiness;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.junit.jupiter.api.Test;
@@ -25,7 +25,7 @@ class MiddeskRequestorTest {
             "}\n";
 
     private CreateMiddeskBusiness setup() {
-        return new CreateMiddeskBusiness(new MiddeskBusinessDAO());
+        return new CreateMiddeskBusiness(new CreateMiddeskBusinessDAO());
 
     }
 

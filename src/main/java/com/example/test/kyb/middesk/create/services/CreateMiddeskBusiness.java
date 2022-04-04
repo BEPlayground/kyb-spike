@@ -1,7 +1,7 @@
-package com.example.test.kyb.middesk.outbound.request.services;
+package com.example.test.kyb.middesk.create.services;
 
-import com.example.test.kyb.middesk.outbound.request.daos.MiddeskBusinessDAO;
-import com.example.test.kyb.middesk.outbound.request.in.Root;
+import com.example.test.kyb.middesk.create.daos.CreateMiddeskBusinessDAO;
+import com.example.test.kyb.middesk.create.in.Root;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
@@ -20,9 +20,9 @@ public class CreateMiddeskBusiness {
     final String APPLICATION_CONTENT_TYPE = "application/json;charset=UTF-8";
     final String API_KEY = "Bearer mk_test_ab588fa6c5bc924cf9e49ca1";
 
-    final private MiddeskBusinessDAO middeskBusinessDAO;
+    final private CreateMiddeskBusinessDAO middeskBusinessDAO;
 
-    public CreateMiddeskBusiness(MiddeskBusinessDAO middeskBusinessDAO) {
+    public CreateMiddeskBusiness(CreateMiddeskBusinessDAO middeskBusinessDAO) {
         this.middeskBusinessDAO = middeskBusinessDAO;
     }
 
@@ -46,6 +46,6 @@ public class CreateMiddeskBusiness {
         Root root = new ObjectMapper().readValue(data, Root.class);
 
         // persist
-        middeskBusinessDAO.save(root);
+        middeskBusinessDAO.apply(root);
     }
 }

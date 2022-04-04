@@ -1,4 +1,4 @@
-package com.example.test.kyb.middesk.inbound.response;
+package com.example.test.kyb.middesk.webhook.in;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,7 +8,7 @@ public class Review {
     public String id;
     public Date created_at;
     public Date updated_at;
-    public Date completed_at;
+    public Object completed_at;
     public ArrayList<Task> tasks;
     public Assignee assignee;
 }

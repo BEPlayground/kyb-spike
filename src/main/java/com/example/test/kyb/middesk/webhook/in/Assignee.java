@@ -1,4 +1,4 @@
-package com.example.test.kyb.middesk.inbound.response;
+package com.example.test.kyb.middesk.webhook.in;
 
 import java.util.ArrayList;
 import java.util.Date;

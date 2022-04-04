@@ -1,13 +1,12 @@
-package com.example.test.kyb.middesk.outbound.request;
+package com.example.test.kyb.middesk.create;
 
-import com.example.test.kyb.middesk.outbound.request.daos.MiddeskBusinessDAO;
-import com.example.test.kyb.middesk.outbound.request.services.CreateMiddeskBusiness;
-import org.apache.http.impl.client.CloseableHttpClient;
+import com.example.test.kyb.middesk.create.daos.CreateMiddeskBusinessDAO;
+import com.example.test.kyb.middesk.create.services.CreateMiddeskBusiness;
 import org.apache.http.impl.client.HttpClients;
 
 import java.io.IOException;
 
-public class ProxyRequestHandler {
+public class CreateMiddeskAction {
     public static String requestWithJson = "{\n" +
             " \"name\":\"Middesk3\", \n" +
             " \"tin\":\"123410000\", \n" +
@@ -24,12 +23,7 @@ public class ProxyRequestHandler {
             "}\n";
 
     public static void main(String[] args) throws IOException {
-        final CreateMiddeskBusiness createMiddeskBusiness = new CreateMiddeskBusiness(new MiddeskBusinessDAO());
+        new CreateMiddeskBusiness(new CreateMiddeskBusinessDAO()).apply(HttpClients.createDefault(), requestWithJson);
 
-        CloseableHttpClient httpclient = HttpClients.createDefault();
-
-        createMiddeskBusiness.apply(httpclient, requestWithJson);
-
-        // Poll the endpoint to get the data of the business when it's done
     }
 }

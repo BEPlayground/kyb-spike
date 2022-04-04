@@ -1,4 +1,4 @@
-package com.example.test.kyb.middesk.outbound.request.in;
+package com.example.test.kyb.middesk.create.in;
 
 import java.util.ArrayList;
 import java.util.Date;
